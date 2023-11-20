@@ -34,4 +34,4 @@ This repository has been developed based on a business entry case provided by a 
     - **c. Penalty amount in decimal format to show fractions.**
 
 5. **Monetary Representation:**
-    - **Ensure displayed monetary values adhere to the appropriate format.**
+    - **Ensure displayed monetary values adhere to the appropriate format.***
