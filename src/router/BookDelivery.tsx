@@ -8,13 +8,9 @@ import tw from '../Tailwind';
 import { CommonActions, useNavigation } from '@react-navigation/native';
 import { CountryType, DateType, FormDataModel, PhotoType } from '../models/model';
 
-type Params = {
-  route: {
-    params: Contact
-  }
-}
+interface Props extends NativeStackScreenProps<RootStackParamList, 'BookDelivery'> {}
 
-const BookDelivery: FC<any> = ({ route: { params } }: Params) => {
+const BookDelivery: FC<Props> = ({ route: { params } }) => {
 
   const navigation = useNavigation();
 
