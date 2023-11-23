@@ -10,7 +10,7 @@ import { FormDataModel } from './models/model';
 
 export type RootStackParamList = {
   Contact: undefined;
-  BookDelivery: undefined;
+  BookDelivery: Contact;
   BookDeliverySummary: { contact: Contact, formData: FormDataModel };
 };
 
