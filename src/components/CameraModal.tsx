@@ -12,11 +12,9 @@ interface CameraModalProps {
 
 const CameraModal: React.FC<CameraModalProps> = ({ isVisible, onClose, onPictureTaken }) => {
 
-  const cameraRef = useRef<any>(null);
+  const cameraRef = useRef(null);
 
-  const devices = useCameraDevices('wide-angle-camera');
-
-  let device = devices.front;
+  const { front } = useCameraDevices('wide-angle-camera');
 
   const takePhoto = useCallback(
     async () => {
@@ -43,9 +41,9 @@ const CameraModal: React.FC<CameraModalProps> = ({ isVisible, onClose, onPicture
   return (
     <Modal visible={isVisible}>
       <View style={styles.container}>
-        {device &&
+        {front &&
           (
-            <Camera orientation={'portrait'} style={tw`flex-1`} ref={cameraRef} device={device} photo={true} isActive={true} />
+            <Camera orientation={'portrait'} style={tw`flex-1`} ref={cameraRef} device={front} photo={true} isActive={true} />
           )
         }
 
