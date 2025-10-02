@@ -1,6 +1,6 @@
 export interface WorkingDaysCalculatorProps {
-  weekendDays: number[]; // Hafta sonu günlerini içeren dizi
-  holidays: Date[]; // Tatil günlerini içeren dizi
+  weekendDays: number[];
+  holidays: Date[];
   startDate: Date;
   endDate: Date;
 }
